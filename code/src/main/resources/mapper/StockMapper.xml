@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gdpu.mapper.StockMapper">
+    
+
+
+
+    <update id="updateByIds" parameterType="com.gdpu.bean.Stock">
+        update stock set upper_alert =#{upperAlert},under_alert=#{underAlert}
+        where goods_id =#{goodsId} and house_id=#{houseId}
+    </update>
+</mapper>
